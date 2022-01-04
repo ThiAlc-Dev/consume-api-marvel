@@ -1,0 +1,44 @@
+#header {
+    display: inline-flex;
+}
+
+h3 {
+    height: 100px;;
+}
+
+h3 a{
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    margin: 20px;   
+}
+
+
+.row {
+    margin:auto;
+    max-width: 1000px;
+    display: contents !important;
+}
+
+
+h1 {
+    margin:auto;
+    max-width: 950px;
+    color: blanchedalmond;
+}
+
+span {
+    font-style: italic;
+    font-family: fantasy;
+}
+
+img {
+    cursor: pointer;
+}
