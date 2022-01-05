@@ -21,11 +21,13 @@
         <br />
         <h3>Encontre seus personagens preferidos da Marvel <a ng-click="showAll()">AQUI</a></h3>
     </div>
-    <div id="hero" class="hero">
+    <img class="logo" src="imgs/header-marvel.jpg">
+    <div class="hero">
         <div class="row" ng-repeat="item in listCharacters track by item.id">
             <div class="card" style="width: 18rem;" id="c0">
-                <img class="card-img-top img-thumbnail" src="{{item.thumbnail.path}}.jpg" 
-                    ng-click="isDetail = !isDetail" alt="Clique para ver mais detlahes" title="Clique para ver mais detlahes" >
+                <img class="card-img-top img-thumbnail" src="{{item.thumbnail.path}}.jpg"
+                    ng-click="isDetail = !isDetail" alt="Clique para ver mais detlahes"
+                    title="Clique para ver mais detlahes">
                 <div class="card-body" ng-show="isDetail">
                     <h5 class="card-title"><span>Personagem:</span> {{item.name}}</h5>
                     <h5><span>Quadrinhos:</span></h5>
