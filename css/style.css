@@ -1,6 +1,13 @@
-#header {
+.header {
+    display: flex;
+    border-bottom: ridge;
+    height: 100px;
+}
+
+#header-container {
     display: inline-flex;
     width: 620px !important;
+    margin-left: 0 !important;
 }
 
 .logo {
@@ -12,10 +19,11 @@
 }
 
 h3 {
-    height: 100px;;
+    height: 100px;
+    margin-top: 35px !important;
 }
 
-h3 a{
+h3 a {
     cursor: pointer;
 }
 
@@ -26,19 +34,19 @@ h3 a{
 }
 
 .card {
-    margin: 20px;   
+    margin: 25px;
 }
 
 
 .row {
-    margin:auto;
+    margin: auto;
     max-width: 1000px;
     display: contents !important;
 }
 
 
 h1 {
-    margin:auto;
+    margin: auto;
     max-width: 950px;
     color: blanchedalmond;
 }
@@ -51,4 +59,3 @@ span {
 img {
     cursor: pointer;
 }
-
