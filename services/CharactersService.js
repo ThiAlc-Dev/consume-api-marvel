@@ -7,9 +7,10 @@ app.service('CharactersService', ['$http', 'BaseConfiguration', function ($http,
     var timeStamp = BaseConfiguration.timeStamp;
 
 
-    this.GetCharacters = function () {
+    this.GetCharacters = function (nameFilter) {
 
-        var url = api + 'characters?limit=56&ts=' + timeStamp + '&apikey=' + apikey + '&hash=' + hash;
+        var Filter = nameFilter == "" || nameFilter == undefined ? "" : 'name=' + nameFilter + '&';
+        var url = api + 'characters?limit=56&' + Filter + 'ts=' + timeStamp + '&apikey=' + apikey + '&hash=' + hash;
         return $http.get(url);
     };
 }]);

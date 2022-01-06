@@ -7,9 +7,11 @@ app.controller('PageController', ['$scope', 'CharactersService',
         }
 
         $scope.showAll = function () {
-            CharactersService.GetCharacters().then(function (result) {
+            CharactersService.GetCharacters($scope.nameFilter).then(function (result) {
                 $scope.listCharacters = result.data.data.results;
-                console.log($scope.listCharacters[0].comics);
+                if($scope.listCharacters.length === 0) {
+                    $scope.message = "Nenhum resultado encontrado para essa pesquisa.";
+                }
             });
         };
 

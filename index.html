@@ -25,11 +25,16 @@
     <div class="header">
         <div id="header-container" class="container">
             <br />
-            <h3>Encontre seus personagens preferidos da Marvel <a ng-click="showAll()">AQUI</a></h3>
+            <h3>
+                Encontre seus personagens preferidos da Marvel 
+                <input type="search" id="buscar" placeholder="Search" ng-model="nameFilter" class="search">
+                <a ng-click="showAll()">AQUI</a>
+            </h3>
         </div>
         <img class="logo" src="imgs/header-marvel.jpg">
     </div>
     <div class="hero">
+        <div ng-show="listCharacters.length == 0" >{{message}}</div>
         <div class="row" ng-repeat="item in listCharacters track by item.id">
             <div class="card" style="width: 18rem;" id="c0">
                 <img class="card-img-top img-thumbnail" src="{{item.thumbnail.path}}.jpg"

@@ -6,7 +6,6 @@
 
 #header-container {
     display: inline-flex;
-    width: 620px !important;
     margin-left: 0 !important;
 }
 
@@ -24,7 +23,7 @@ h3 {
 }
 
 h3 a {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .hero {
@@ -58,4 +57,10 @@ span {
 
 img {
     cursor: pointer;
+}
+
+#buscar {
+    border: inset;
+    border-radius: 9px;
+    width: 200px;
 }
